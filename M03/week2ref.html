@@ -1,0 +1,505 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CIS133W Week 2 Lab 2 </title>
+        <p><b> CIS133W Week 2 Lab 2 </b></p>
+        <p>-----------------------------------------</p>
+    </head>
+    <body>
+        <script>
+            var prob1Header = " is a:"
+            var prob1StrA = ('""' + prob1Header);
+            var prob1CaseA = typeof ("");
+            var prob1StrB = ('0' + prob1Header);
+            var prob1CaseB = typeof (0);
+            var prob1StrC = ('1' + prob1Header);
+            var prob1CaseC = typeof (1);
+            var prob1StrD = ('"0' + prob1Header);
+            var prob1CaseD = typeof ('0');
+            var prob1StrE = ('"1"' + prob1Header);
+            var prob1CaseE = typeof ('1');
+            var prob1StrF = ('[]' + prob1Header);
+            var prob1CaseF = typeof ([]);
+            var prob1StrG = ('{}' + prob1Header);
+            var prob1CaseG = typeof ({});
+            var prob1StrH = ('null' + prob1Header);
+            var prob1CaseH = typeof (null);
+            var prob1StrI = ('undefined' + prob1Header);
+            var prob1CaseI = typeof (undefined);
+            var prob1StrJ = ('NaN' + prob1Header);
+            var prob1CaseJ = typeof (NaN);
+            var prob1StrK = ('Infinity' + prob1Header);
+            var prob1CaseK = typeof (Infinity);
+            var prob1StrL = ('console' + prob1Header);
+            var prob1CaseL = typeof (console);
+            var prob1StrM = ('consoel.log' + prob1Header);
+            var prob1CaseM = typeof (console.log);
+            var prob1StrN = ('document' + prob1Header);
+            var prob1CaseN = typeof (document);
+            var prob1StrO = ('document.write' + prob1Header);
+            var prob1CaseO = typeof (document.write);
+            var prob1StrP = ('true' + prob1Header);
+            var prob1CaseP = typeof (true);
+            var prob1StrQ = ('false' + prob1Header);
+            var prob1CaseQ = typeof (false);
+        </script>
+        <p>Lets begin by expanding on the various data types within Javascript<br>
+            and examine how they are internally classified.</p>
+        <table style="border: 1px solid black;background-color: linen;">
+            <tr>
+                <th style="border: 1px solid black;"> Test data </th>
+                <th style="border: 1px solid black;"> Data type </th>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1StrA)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1CaseA)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1StrB)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1CaseB)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1StrC)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1CaseC)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1StrD)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1CaseD)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1StrE)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1CaseE)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1StrF)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1CaseF)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1StrG)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1CaseG)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1StrH)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1CaseH)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1StrI)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1CaseI)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1StrJ)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1CaseJ)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1StrK)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1CaseK)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1StrL)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1CaseL)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1StrM)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1CaseM)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1StrN)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1CaseN)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1StrO)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1CaseO)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1StrP)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(199, 157, 157);">
+                    <script>document.write(prob1CaseP)</script>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1StrQ)</script>
+                </td>
+                <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">
+                    <script>document.write(prob1CaseQ)</script>
+                </td>
+            </tr>
+        </table>
+    </body>
+    <body>
+        <div>
+            <script>
+            var prob2AddStr1 = "4" + 9;
+            var prob2AddStr2 = 3 + "7";
+            var prob2AddStrB = "2" + "5";
+            var prob2SubStr1 = "4" - 9;
+            var prob2SubStr2 = 3 - "7";
+            var prob2SubStrB = "2" - "5";
+            var prob2MultStr1 = "4" * 9;
+            var prob2MultStr2 = 3 * "7";
+            var prob2MultStrB = "2" * "5";
+            var prob2DivStr1 = "4" / 9;
+            var prob2DivStr2 = 3 / "7";
+            var prob2DivStrB = "2" / "5";
+            var prob2PercStr1 = "2" % 5;
+            var prob2PercStr2 = 3 % "7";
+            var prob2PercStrB = "2" % "5";
+            </script>
+            <p>Next, lets look at arithmetic operators and examine how<br>
+                they behave when mixing data types / data type positions.</p>
+            <table style="border: 1px solid black;background-color: linen;">
+                <tr>
+                    <th style="border: 1px solid black;"> Calculation </th>
+                    <th style="border: 1px solid black;"> Output </th>
+                </tr>
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">"4" + 9</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;"><script>document.write(prob2AddStr1)</script></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);">3 + "7"</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);"><script>document.write(prob2AddStr2)</script></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">"2" + "5"</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;"><script>document.write(prob2AddStrB)</script></td>
+                </tr>
+                
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);">"4" - 9</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);"><script>document.write(prob2SubStr1)</script></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">3 - "7"</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;"><script>document.write(prob2SubStr2)</script></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);">"2" - "5"</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);"><script>document.write(prob2SubStrB)</script></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">"4" * 9</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;"><script>document.write(prob2MultStr1)</script></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);">3 * "7"</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);"><script>document.write(prob2MultStr2)</script></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">"2" * "5"</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;"><script>document.write(prob2MultStrB)</script></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);">"4" / 9</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);"><script>document.write(prob2DivStr1)</script></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">3 / "7"</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;"><script>document.write(prob2DivStr2)</script></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);">"2" / "5"</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);"><script>document.write(prob2DivStrB)</script></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">"4" % 9</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;"><script>document.write(prob2PercStr1)</script></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);">3 % "7"</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: rgb(212, 200, 184);"><script>document.write(prob2PercStr2)</script></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;">"2" % "5"</td>
+                    <td style="text-align:center;border: 1px solid black;background-color: lightgrey;"><script>document.write(prob2PercStrB)</script></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    <body>
+        <script>
+            var prob3Calc1 = 10 + 5 % 2;
+            var prob3Calc1Str = "10 + 5 % 2";
+            var prob3Calc2 = (10 + 5) % 2;
+            var prob3Calc2Str = "(10 + 5) % 2";
+            var prob3Calc3 = 10 + (5 % 2);
+            var prob3Calc3Str = "10 + (5 % 2)";
+            var prob3Calc4 = 10 * 5 % 2;
+            var prob3Calc4Str = "10 * 5 % 2";
+        </script>
+        <p>Now that we have covered arithmetic, lets examine the order<br>
+            of operations and explore how JavaScrapt handles it.
+        </p>
+        <table style="border: 1px solid black;background-color: linen;">
+            <tr>
+                <th style="border: 1px solid black;"> Calculation </th>
+                <th style="border: 1px solid black;"> Output </th>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(250, 217, 150);"><script>document.write(prob3Calc1Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(250, 217, 150);"><script>document.write(prob3Calc1)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(196, 206, 188);"><script>document.write(prob3Calc2Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(196, 206, 188);"><script>document.write(prob3Calc2)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(250, 217, 150);"><script>document.write(prob3Calc3Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(250, 217, 150);"><script>document.write(prob3Calc3)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(196, 206, 188);"><script>document.write(prob3Calc4Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(196, 206, 188);"><script>document.write(prob3Calc4)</script></td>
+            </tr>
+        </table>
+    </body>
+    <body>
+        <script>
+            var prob5Boo01 = new Boolean(0);
+            var prob5Boo01Str = ('0');
+            var prob5Boo02 = new Boolean(1);
+            var prob5Boo02Str = ('1');
+            var prob5Boo03 = new Boolean(2);
+            var prob5Boo03Str = ('2');
+            var prob5Boo04 = new Boolean("0");
+            var prob5Boo04Str = ('"0"');
+            var prob5Boo05 = new Boolean("1");
+            var prob5Boo05Str = ('"1"');
+            var prob5Boo06 = new Boolean("cow");
+            var prob5Boo06Str = ('"cow"');
+            var prob5Boo07 = new Boolean("");
+            var prob5Boo07Str = ('""');
+            var prob5Boo08 = new Boolean(null);
+            var prob5Boo08Str = ('null');
+            var prob5Boo09 = new Boolean(undefined);
+            var prob5Boo09Str = ('undefined');
+            var prob5Boo10 = new Boolean(NaN);
+            var prob5Boo10Str = ('NaN');
+            var prob5Boo11 = new Boolean(Infinity);
+            var prob5Boo11Str = ('Infinity');
+            var prob5Boo12 = new Boolean([]);
+            var prob5Boo12Str = ('[]');
+            var prob5Boo13 = new Boolean([0]);
+            var prob5Boo13Str = ('[0]');
+            var prob5Boo14 = new Boolean({});
+            var prob5Boo14Str = ('{}')
+            var prob5Boo15 = new Boolean({vegetable: "cabbage"});
+            var prob5Boo15Str = ('{vegetable: "cabbage"}');
+        </script>
+        <p>Now that we have covered arithmetic, the order of operations.<br>
+            lets now examine whether a steatement is Truth or Falsy
+        </p>
+        <table style="border: 1px solid black;background-color: linen;">
+            <tr>
+                <th style="border: 1px solid black;"> Test statement </th>
+                <th style="border: 1px solid black;"> Is Truthy? T/F </th>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo01Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo01)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo02Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo02)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo03Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo05)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo04Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo04)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo05Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo05)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo06Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo06)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo07Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo07)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo08Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo08)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo09Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo09)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo10Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo10)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo11Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo11)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo12Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo12)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo13Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo13)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo14Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(219, 252, 245);"><script>document.write(prob5Boo14)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo15Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(198, 196, 251);"><script>document.write(prob5Boo15)</script></td>
+            </tr>
+        </table>
+    </body>
+    <body>
+        <script>
+            var prob6Res1 = "dog" || "cat" || "cow";
+            var prob6Res1Str = ('"dog" || "cat" || "cow"');
+            var prob6Res2 = "dog" && "cat" && "cow";
+            var prob6Res2Str = ('"dog" && "cat" && "cow"');
+        </script>
+        <p>Nearing the bottom, lets start exploring some interesting<br>
+            ways that JavaScript returns results from odd expressions.
+        </p>
+        <table style="border: 1px solid black;background-color: linen;">
+            <tr>
+                <th style="border: 1px solid black;"> Test string </th>
+                <th style="border: 1px solid black;"> Return result </th>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(205, 255, 253);"><script>document.write(prob6Res1Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(205, 255, 253);"><script>document.write(prob6Res1)</script></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(228, 213, 255);"><script>document.write(prob6Res2Str)</script></td>
+                <td style="text-align:center;border: 1px solid black;background-color: rgb(228, 213, 255);"><script>document.write(prob6Res2)</script></td>
+            </tr>
+        </table>
+    </body>
+    <body>
+        <p>This is an absolute metric ton of data for how JavaScript<br>
+            functions. Now, lets look at a quick reference sheet I made<br>
+            at work to help with coding part of this site.
+        </p>
+        <p>
+            function typeCheck(data_1){<br>
+            &emsp;var result = null<br>
+            &emsp;let log_entry = data_1<br>
+            &emsp;if (isNaN(log_entry) == false){<br>
+            &emsp;&emsp;result = (`${log_entry} is a number`)<br>
+            &emsp;} else if (isNaN(log_entry) == true){<br>
+            &emsp;&emsp;result = (`${ log_entry} is a string`)<br>
+            &emsp;} else{<br>
+            &emsp;&emsp;result = (`We have no idea what${ log_entry} is lol`)<br>
+            &emsp;}<br>
+            &emsp;return result<br>
+            }<br>
+            <br>
+            function main(){<br>
+            &emsp;//var entry = prompt("Please enter a number or string: ")<br>
+            &emsp;var entry = "e"<br>
+            &emsp;var result = typeCheck(entry)<br>
+            &emsp;console.log(result)<br>
+            }<br>
+            <br>
+            main()<br>
+            <br>
+            // Numbers:<br>
+            let length = 16;<br>
+            let weight = 7.5;<br>
+            <br>
+            // Strings:<br>
+            let color = "Yellow";<br>
+            let lastName = "Johnson";<br>
+            <br>
+            // Booleans<br>
+            let x = true;<br>
+            let y = false;<br>
+            <br>
+            // Object:<br>
+            const person = {firstName:"John", lastName:"Doe"};<br>
+            <br>
+            // Array object:<br>
+            const cars = ["Saab", "Volvo", "BMW"];<br>
+            <br>
+            // Date object:<br>
+            const date = new Date("2022-03-25");<br>
+        </p>
+    </body>
+    <footer>
+        <p>-------------------------------------<br>
+            This is the end of the HTML document, and it's in a footer tag.<br>
+            -------------------------------------
+        </p>
+    </footer>
+</hmtl>

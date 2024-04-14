@@ -1,0 +1,16 @@
+.tile{
+    border: 3px solid rgb(0, 0, 0);
+    display: inline-block;
+    margin: 4px;
+    background-color: rgb(227, 227, 227);
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+body {
+    overflow: hidden;
+    margin: 0px;
+    background-color: rgb(133, 167, 103);
+}

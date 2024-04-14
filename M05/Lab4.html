@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CIS133W Week 3 Lab 3 </title>
+        <p><b> Virtual change calculator! </b></p>
+        <p>-----------------------------------------</p>
+    </head>
+
+    <script src="Lab4JavaScriptSimple.js""></script>
+    
+
+    <body>
+        <img src="cashboi.jpg" alt="good little money boi" width="400" height="346">
+        
+        <p>Hello and welcome to my online change calculator!<br>
+            There are many like it, but this one is mine :)</p>
+    </body>
+
+    <body>
+        <div>
+            <p>If you would like to build an itemized reciept, please use this section.<br></p>
+            <p>Item value: <input type="number" id="userNum2"><span id="tablePriceWarn" style="color:rgb(172, 0, 0);"></span><br>
+            Item Quantity: <input type="number" id="userNum3"><span id="tableQtyWarn" style="color:rgb(172, 0, 0);"></span><br>
+            Add a reciept name: <input type="text" id="userText" oninput="validText()"><span id="nameWarn" style="color:rgb(172, 0, 0);"></span></p>
+            <p>Action: 
+            <select id="mathFunction"> 
+                <option value="add">Add to total</option> 
+                <option value="sub">Subtract from total</option> 
+            </select>
+            </p>
+        </div>
+        <div>
+            <p>Current value: $<span id="tableValueDis" style="color:rgb(0, 0, 0);"></span>
+                <br>
+                Last item added: $<span id="tableValueChange" style="color:rgb(15, 0, 102);"></span>
+                <span id="tableValueWarn" style="color:rgb(172, 0, 0);"></span>
+            </p>
+            <button onclick="tableData()">Add new item</button><span id="negBalWarn" style="color:rgb(172, 0, 0);"></span><br>
+            <button onclick="dataUndo()">Undo last item</button><span id="undoWarn" style="color:rgb(172, 0, 0);"></span><br>
+            <button onclick="resetAll()">Clear all data</button><span id="resetWarn" style="color:rgb(172, 0, 0);"></span><br>
+            <button onclick="changeCalc()">Calculate change</button><span id="calcWarn" style="color:rgb(172, 0, 0);"></span>
+        </div>
+        <div>
+            <p><span id="changeDis" style="color:rgb(0, 0, 0);"></span></p>
+        </div>
+    </body>
+
+    <body onload="dataInit()">
+        <div>
+            <p><span id="bill" style="color:rgb(0, 0, 0);"></span></p>
+        </div>
+    </body>
+</hmtl>
